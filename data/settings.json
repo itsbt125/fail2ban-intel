@@ -1,11 +1,11 @@
 {
-  "api_token":      "your_token_here", # Find your api key here for free https://ipinfo.io/dashboard
+  "api_token":      "your_token_here",
   "top_n":          10, 
   "bar_width":      64,
-  "log_glob":       "/var/log/fail2ban.log*", # Default fail2ban log file, change if needed.
-  "attempted_file": "data/attempted.txt", # This will be generated
-  "cache_file":     "data/cache.json", # This will be generated
-  "verbose":        false, # Enable this to see more information
+  "log_glob":       "/var/log/fail2ban.log*",
+  "attempted_file": "data/attempted.txt",
+  "cache_file":     "data/cache.json",
+  "verbose":        false,
   "char_filled":    "·",
   "char_empty":     "·"
 }
