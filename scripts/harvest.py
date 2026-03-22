@@ -4,7 +4,6 @@ from colorama import Fore, Style
 
 IP_REGEX = r"([0-9]{1,3}\.){3}[0-9]{1,3}"
 
-
 def _grep(keyword: str, log_glob: str) -> list[str]:
     cmd    = f'sudo grep "{keyword}" {log_glob} | grep -oE "{IP_REGEX}" | sort -u'
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
@@ -16,7 +15,6 @@ def _grep(keyword: str, log_glob: str) -> list[str]:
     return list(dict.fromkeys(
         line.strip() for line in result.stdout.splitlines() if line.strip()
     ))
-
 
 def harvest(log_glob: str, attempted_file: str) -> list[str]:
     attempted = _grep("Found", log_glob)

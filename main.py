@@ -18,12 +18,12 @@ def main():
     TERM_W      = shutil.get_terminal_size((120, 24)).columns
 
     print(Fore.WHITE + Style.BRIGHT + "\n" + "═" * TERM_W)
-    print(Fore.WHITE + Style.BRIGHT + "  Harvesting logs...")
-
+    print(Fore.WHITE + Style.BRIGHT + "  Harvesting logs as sudo...")
+    
     attempted_ips = harvest(s["log_glob"], s["attempted_file"])
-
+    
     if not attempted_ips:
-        print(Fore.RED + "  No IPs to process. Exiting." + Style.RESET_ALL)
+        print(Fore.RED + "  No IPs found in log file to process. Exiting." + Style.RESET_ALL)
         return
 
     print(Style.DIM + Fore.WHITE + f"  {len(attempted_ips)} unique attempted IPs found in logs." + Style.RESET_ALL)

@@ -4,7 +4,6 @@ from colorama import Fore, Style
 
 ORANGE = "\033[38;5;208m"
 
-
 def _bar(count: int, max_count: int, bar_width: int, char_filled: str, char_empty: str) -> str:
     filled = round((count / max_count) * bar_width) if max_count else 0
     return (
@@ -12,7 +11,6 @@ def _bar(count: int, max_count: int, bar_width: int, char_filled: str, char_empt
         + Style.DIM + Fore.WHITE + char_empty * (bar_width - filled)
         + Style.RESET_ALL
     )
-
 
 def _section(title: str, attempted_ctr: Counter, top_n: int, bar_width: int, char_filled: str, char_empty: str) -> None:
     top = attempted_ctr.most_common(top_n if top_n > 0 else None)
@@ -36,7 +34,6 @@ def _section(title: str, attempted_ctr: Counter, top_n: int, bar_width: int, cha
             f"   {_bar(count, max_att, BAR_W, char_filled, char_empty)}"
         )
 
-
 def print_header(attempted: list, new_count: int, cache_total: int, verbose: bool) -> None:
     W = shutil.get_terminal_size((120, 24)).columns
     print(Fore.WHITE + Style.BRIGHT + "\n" + "═" * W)
@@ -48,7 +45,6 @@ def print_header(attempted: list, new_count: int, cache_total: int, verbose: boo
         + Style.RESET_ALL
     )
     print(Fore.WHITE + Style.BRIGHT + "═" * W)
-
 
 def print_report(attempted: list, top_n: int, bar_width: int, char_filled: str, char_empty: str) -> None:
     def ctr(data, key): return Counter(r[key] for r in data)
