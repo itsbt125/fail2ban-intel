@@ -2,10 +2,10 @@ import os
 import subprocess
 from colorama import Fore, Style
 
-IP_REGEX = r"([0-9]{1,3}\.){3}[0-9]{1,3}"
+IPV4_REGEX = r"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
 
 def _grep(keyword: str, log_glob: str) -> list[str]:
-    cmd    = f'sudo grep "{keyword}" {log_glob} | grep -oE "{IP_REGEX}" | sort -u'
+    cmd    = f'sudo grep "{keyword}" {log_glob} | grep -oE "{IPV4_REGEX}" | sort -u'
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     if result.returncode != 0 and not result.stdout.strip():
