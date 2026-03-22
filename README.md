@@ -63,5 +63,9 @@ fail2ban-intel/
 - API results are cached in `data/cache.json` — only new IPs are looked up via the API  on each run
 - Uses [ipinfo.io](https://ipinfo.io) Lite (free, unlimited requests)
 - Bulk reporting support to AbuseIPDB is coming soon!
+
+## Images
+
 ![1](imgs/1.png)
 ![2](imgs/2.png)
+![3](imgs/3.png)
