@@ -9,6 +9,7 @@ _DEFAULTS = {
     "attempted_file": "data/attempted.txt",
     "cache_file":     "data/cache.json",
     "verbose":        False,
+    "minimal":        False,
     "char_filled":    "·",
     "char_empty":     "·",
 }

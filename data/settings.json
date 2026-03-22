@@ -6,6 +6,7 @@
   "attempted_file": "data/attempted.txt",
   "cache_file":     "data/cache.json",
   "verbose":        false,
+  "minimal": 		true,
   "char_filled":    "·",
   "char_empty":     "·"
 }

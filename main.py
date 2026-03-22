@@ -13,6 +13,7 @@ init(autoreset=True)
 def main():
     s           = cfg.load()
     verbose     = s["verbose"]
+    minimal     = s["minimal"]
     char_filled = s["char_filled"]
     char_empty  = s["char_empty"]
     TERM_W      = shutil.get_terminal_size((120, 24)).columns
