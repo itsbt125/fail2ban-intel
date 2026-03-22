@@ -40,7 +40,7 @@ All settings live in `data/settings.json`.
 ## Structure
 
 ```
-fail2ban-recon/
+fail2ban-intel/
 ├── main.py
 ├── README.md
 ├── requirements.txt
