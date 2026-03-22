@@ -1,0 +1,11 @@
+{
+  "api_token":      "your_token_here",
+  "top_n":          10,
+  "bar_width":      64,
+  "log_glob":       "/var/log/fail2ban.log*",
+  "attempted_file": "data/attempted.txt",
+  "cache_file":     "data/cache.json",
+  "verbose":        false,
+  "char_filled":    "·",
+  "char_empty":     "·"
+}
