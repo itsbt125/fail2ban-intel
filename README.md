@@ -37,7 +37,7 @@ All settings live in `data/settings.json`.
 | `char_filled`    | `·`                         | Character for filled bar           |
 | `char_empty`     | `·`                         | Character for empty bar            |
 
-## Structure
+## Bare Structure (not including cache or logs)
 
 ```
 fail2ban-intel/
