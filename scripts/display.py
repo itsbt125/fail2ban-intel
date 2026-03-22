@@ -22,6 +22,7 @@ def _section(title: str, attempted_ctr: Counter, top_n: int, bar_width: int, cha
     max_att = top[0][1]
     NAME_W  = max(len(k) for k, _ in top) + 2
     TERM_W  = shutil.get_terminal_size((120, 24)).columns
+    BAR_W   = 0  # Default value
 
     if show_bar:
         BAR_W = min(bar_width, max(10, TERM_W - NAME_W - 18))
@@ -60,7 +61,7 @@ def print_report(attempted: list, top_n: int, bar_width: int, char_filled: str, 
         _section("Cities",      city_ctr(attempted),        top_n, bar_width, char_filled, char_empty)
         _section("ISPs / ASNs", ctr(attempted, "org"),      top_n, bar_width, char_filled, char_empty)
     elif minimal:
-        _section("Countries",   ctr(attempted, "country"),top_n)
-        _section("ISPs / ASNs", ctr(attempted, "org"),top_n)
+        _section("Countries",   ctr(attempted, "country"), top_n, 0, char_filled, char_empty)
+        _section("ISPs / ASNs", ctr(attempted, "org"),     top_n, 0, char_filled, char_empty)
     W = shutil.get_terminal_size((120, 24)).columns
     print(Style.DIM + "\n" + "═" * W + "\n" + Style.RESET_ALL)

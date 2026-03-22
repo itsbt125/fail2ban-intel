@@ -41,8 +41,8 @@ def main():
 
     attempted = [cache[ip] for ip in attempted_ips if ip in cache]
 
-    print_header(attempted, new_count, len(cache), verbose)
-    print_report(attempted, s["top_n"], s["bar_width"], char_filled, char_empty)
+    print_header(attempted, new_count, len(cache), verbose,minimal)
+    print_report(attempted, s["top_n"], s["bar_width"], char_filled, char_empty,minimal)
 
 
 if __name__ == "__main__":

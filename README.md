@@ -34,6 +34,7 @@ All settings live in `data/settings.json`.
 | `attempted_file` | `data/attempted.txt`        | Output file for harvested IPs      |
 | `cache_file`     | `data/cache.json`           | Cache file for API results         |
 | `verbose`        | `false`                     | Print each IP as it's fetched      |
+| `minimal`		   | `false`					 | Prevents bar and city from showing | 
 | `char_filled`    | `·`                         | Character for filled bar           |
 | `char_empty`     | `·`                         | Character for empty bar            |
 
