@@ -62,6 +62,6 @@ fail2ban-intel/
 - Requires `sudo` access to read `/var/log/fail2ban.log*`
 - API results are cached in `data/cache.json` — only new IPs are looked up via the API  on each run
 - Uses [ipinfo.io](https://ipinfo.io) Lite (free, unlimited requests)
-
+- Bulk reporting support to AbuseIPDB is coming soon!
 ![1](imgs/1.png)
 ![2](imgs/2.png)
