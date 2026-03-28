@@ -49,7 +49,8 @@ fail2ban-intel/
 │   └── settings.json
 ├── imgs/
 │   ├── 1.png
-│   └── 2.png
+│   ├── 2.png
+	└── 3.png
 └── scripts/
     ├── cache.py
     ├── display.py
